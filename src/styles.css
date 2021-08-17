@@ -16,3 +16,13 @@ h1 {
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   color: #878787;
 }
+.minkkifaces {
+  text-align: center;
+}
+#minkki-icon-clouds,
+#minkki-icon-sun,
+#minkki-icon-rain,
+#minkki-icon-thunder,
+#minkki-icon-halfcloud {
+  margin: 10px 25px 10px 25px;
+}
