@@ -1,0 +1,18 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  color: #2c2e90;
+  font-family: "Lobster", cursive;
+}
+
+.weatherbox {
+  display: block;
+  margin: 200px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  color: #878787;
+}
