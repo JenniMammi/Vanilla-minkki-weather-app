@@ -21,17 +21,17 @@
     <!-- Axios link -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- Script to app.js -->
-    <script src="src/app.js"></script>
     <title>Minkki's weather app</title>
   </head>
   <body>
     <div class="app">
+      <form id="searchform">
     <div class="searchfield">
-      <input type="text" class="form-control" />
-      <button type="submit" class="btn btn-primary mb-3">Search</button>
+      <input type="search" placeholder="Search city 🔎" class="form-control" id="city-input"/>
+      <input type="submit" value="Search" class="btn btn-primary mb-3"/>
     </div>
     <!-- this /div refers to <div class="searchfield"> -->
+      </form>
     <div class="weathercontainer">
       <img
         src=""
@@ -63,5 +63,7 @@
     <!-- this /div refers to <div class="weathercontainer"> -->
        <small id="signature"><a href="https://github.com/JenniMammi/minkkis-weather-app">Open source application,</a> coded by Jenni Mämmi</small>
   </div> <!-- this /div refers to <div class="app"> -->
-    </body>
+      <!-- Script to app.js -->
+    <script src="src/app.js"></script>  
+  </body>
 </html>

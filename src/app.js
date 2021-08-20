@@ -16,7 +16,6 @@ function formatDate(timestamp) {
 }
 
 function displayCurrentTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature-now");
   let cityElement = document.querySelector("#city-searched");
   let descElement = document.querySelector("#weather-description");
@@ -26,7 +25,9 @@ function displayCurrentTemperature(response) {
   let iconElement = document.querySelector("#weather-icon");
   let dogFace = document.querySelector("#dogface-icon");
 
-  if (temperatureElement > 15) {
+  if (response.data.main.temp > 20) {
+    dogFace.setAttribute("src", "images/hotdog.png");
+  } else if (response.data.main.temp > 10) {
     dogFace.setAttribute("src", "images/warmdog.png");
   } else {
     dogFace.setAttribute("src", "images/colddog.png");
@@ -44,9 +45,20 @@ function displayCurrentTemperature(response) {
   );
 }
 
-let apiKey = "02e63bbc86dac944d774fba2018e7b56";
-let city = "Oslo";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "02e63bbc86dac944d774fba2018e7b56";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-console.log(apiUrl);
-axios.get(apiUrl).then(displayCurrentTemperature);
+  axios.get(apiUrl).then(displayCurrentTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Tel Aviv");
+
+let form = document.querySelector("#searchform");
+form.addEventListener("submit", handleSubmit);
