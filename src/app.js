@@ -16,6 +16,7 @@ function formatDate(timestamp) {
 }
 
 function displayCurrentTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature-now");
   let cityElement = document.querySelector("#city-searched");
   let descElement = document.querySelector("#weather-description");
@@ -31,7 +32,8 @@ function displayCurrentTemperature(response) {
 }
 
 let apiKey = "02e63bbc86dac944d774fba2018e7b56";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tel Aviv&appid=${apiKey}&units=metric`;
+let city = "Paris";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);
 axios.get(apiUrl).then(displayCurrentTemperature);
