@@ -12,12 +12,9 @@
       crossorigin="anonymous"
     />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,700&family=Lobster&display=swap"
-      rel="stylesheet"
-    />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory&family=Raleway&family=Rampart+One&display=swap" rel="stylesheet">
     <!-- Stylesheet link below -->
     <link rel="stylesheet" href="src/styles.css" />
 
@@ -26,6 +23,7 @@
     <title>Minkki's weather app</title>
   </head>
   <body>
+    <div class="app">
     <div class="searchfield">
       <input type="text" class="form-control" />
       <button type="submit" class="btn btn-primary mb-3">Search</button>
@@ -42,13 +40,15 @@
         <h2>Friday 18:00</h2>
         <p>Clear sky</p>
       </div> <!-- this /div refers to <div class="cityName"> -->
-
+        <div class="weatherinsights"></div>
       <ul>
         <li>Wind:</li>
         <li>Humidity:</li>
         <li>Precipitation:</li>
       </ul>
+      </div>  <!-- this /div refers to <div class="weatherinsights"> -->
     </div>
     <!-- this /div refers to <div class="weathercontainer"> -->
-  </body>
+  </div> <!-- this /div refers to <div class="app"> -->
+    </body>
 </html>

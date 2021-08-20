@@ -1,10 +1,26 @@
-.btn {
-  background-color: #5e60ce;
-  margin: 0px !important;
+body {
+  font-family: "Glory", sans-serif;
 }
 
+h1 {
+  font-family: "Rampart One", cursive;
+}
+
+.app {
+  margin: 150px;
+}
+.btn {
+  background-color: #5e60ce;
+  border: #5e60ce;
+  margin: 0px !important;
+}
+.btn:hover {
+  background-color: #3e40ce;
+  border: #3e40ce;
+}
 .form-control {
-  max-width: 700px;
+  max-width: 600px;
+  margin-right: 10px;
 }
 
 .searchfield {
@@ -13,6 +29,24 @@
 }
 
 .weathercontainer {
-  grid-template-columns: 1fr 500px 1fr 500px 1fr 1000px;
-  display: grid;
+  max-width: 900px;
+  grid-template-columns: 1fr 300px 1fr 300px 1fr 300px;
+  margin: 40px auto;
+  padding: 40px;
+  display: flex;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+}
+
+#weather-icon {
+  width: 200px;
+  margin: auto;
+}
+
+.cityName {
+  margin: auto;
+}
+
+ul {
+  margin: auto;
 }
