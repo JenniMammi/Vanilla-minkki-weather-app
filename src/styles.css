@@ -55,7 +55,7 @@ h1 {
   margin: auto;
 }
 
-#weather-description {
+li:first-letter {
   text-transform: capitalize;
 }
 
@@ -64,6 +64,7 @@ ul {
   list-style: none;
   text-align: left;
   font-size: 18px;
+  padding: 0;
 }
 
 #signature {
