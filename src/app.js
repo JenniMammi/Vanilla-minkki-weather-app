@@ -26,12 +26,10 @@ function displayCurrentTemperature(response) {
   let iconElement = document.querySelector("#weather-icon");
   let dogFace = document.querySelector("#dogface-icon");
 
-  if (temperatureElement > 10) {
-    dogFace =
-      "https://ichef.bbci.co.uk/news/976/cpsprodpb/A254/production/_117665514_cold.jpg";
+  if (temperatureElement > 15) {
+    dogFace.setAttribute("src", "images/warmdog.png");
   } else {
-    dogFace =
-      "https://thumbs.dreamstime.com/b/opposite-words-warm-cool-vector-illustration-opposite-words-warm-cool-139092490.jpg";
+    dogFace.setAttribute("src", "images/colddog.png");
   }
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
