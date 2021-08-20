@@ -23,16 +23,31 @@ function displayCurrentTemperature(response) {
   let humidElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dayElement = document.querySelector("#day");
+  let iconElement = document.querySelector("#weather-icon");
+  let dogFace = document.querySelector("#dogface-icon");
+
+  if (temperatureElement > 10) {
+    dogFace =
+      "https://ichef.bbci.co.uk/news/976/cpsprodpb/A254/production/_117665514_cold.jpg";
+  } else {
+    dogFace =
+      "https://thumbs.dreamstime.com/b/opposite-words-warm-cool-vector-illustration-opposite-words-warm-cool-139092490.jpg";
+  }
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descElement.innerHTML = response.data.weather[0].description;
   humidElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dayElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "02e63bbc86dac944d774fba2018e7b56";
-let city = "Paris";
+let city = "Oslo";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);

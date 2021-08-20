@@ -49,8 +49,12 @@ h2 {
   background-color: white;
 }
 
-#weather-icon {
+#dogface-icon {
   width: 200px;
+  margin: auto;
+}
+
+#weather-icon {
   margin: auto;
 }
 
@@ -72,8 +76,8 @@ ul {
 
 #signature {
   position: fixed;
-  left: 510px;
-  top: 570px;
+  left: 516px;
+  top: 605px;
   font-size: 12px;
   color: grey;
 }
