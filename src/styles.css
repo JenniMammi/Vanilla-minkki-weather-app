@@ -55,8 +55,21 @@ h1 {
   margin: auto;
 }
 
+#weather-description {
+  text-transform: capitalize;
+}
+
 ul {
   margin: auto;
   list-style: none;
   text-align: left;
+  font-size: 18px;
+}
+
+#signature {
+  position: fixed;
+  left: 510px;
+  top: 570px;
+  font-size: 12px;
+  color: grey;
 }

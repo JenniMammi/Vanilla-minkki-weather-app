@@ -18,6 +18,9 @@
     <!-- Stylesheet link below -->
     <link rel="stylesheet" href="src/styles.css" />
 
+    <!-- Axios link -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <!-- Script to app.js -->
     <script src="src/app.js"></script>
     <title>Minkki's weather app</title>
@@ -36,22 +39,23 @@
         id="weather-icon"
       />
       <div class="cityName">
-        <h1>19°C</h1>
-        <h2>Helsinki</h2>
+        <h1 id="temperature-now">19°C</h1>
+        <p><span id="celsius">°C</span> | <span id="fahrenheit">°F</span></p>
+        <h2 id="city-searched">Helsinki</h2>
         <div class="timeClock">
           <span id="day">Friday</span> <span id="time">18:00</span>
         </div> <!-- this /div refers to <div class="timeClock"> -->
-        <div class="weatherDescription">
-          Clear sky
-        </div> <!-- this /div refers to <div class="weatherDescription"> -->
+        <div class="Description">
+          <span id="weather-description">Clear sky</span>
+        </div> <!-- this /div refers to <div class="Description"> -->
       </div> <!-- this /div refers to <div class="cityName"> -->
         <div class="weatherinsights"></div>
       <ul>
-        <li>Wind:</li>
-        <li>Humidity:</li>
-        <li>Precipitation:</li>
+        <li>Wind: <span id="wind"></span>m/s</li>
+        <li>Humidity: <span id="humidity"></span>%</li>
       </ul>
       </div>  <!-- this /div refers to <div class="weatherinsights"> -->
+        <small id="signature"><a href="https://github.com/JenniMammi/minkkis-weather-app">Open source application,</a> coded by Jenni Mämmi</small>
     </div>
     <!-- this /div refers to <div class="weathercontainer"> -->
   </div> <!-- this /div refers to <div class="app"> -->
