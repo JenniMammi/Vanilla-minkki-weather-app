@@ -18,67 +18,37 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,300;1,400;1,700&family=Lobster&display=swap"
       rel="stylesheet"
     />
-            <!-- Stylesheet link below -->
+    <!-- Stylesheet link below -->
     <link rel="stylesheet" href="src/styles.css" />
+
+    <!-- Script to app.js -->
+    <script src="src/app.js"></script>
     <title>Minkki's weather app</title>
   </head>
-
-  <body style="background-color: #e3ecf8">
-    <div class="weatherwrapper">
-      <div class="weatherbox">
-        <class id="searchform">
-          <form class="row g-3">
-            <div class="col-9">
-              <input type="text" class="form-control" id="searchbar" />
-            </div>
-            <div class="col-3">
-              <button
-                type="submit"
-                class="btn btn-primary mb-3"
-                style="background-color: #5e60ce; border: transparent"
-              >
-                Search
-              </button>
-            </div>
-
-          </form>
-          <hr />
-          <!-- Starting 3 grids here -->
-
-          <div class="container">
-            <div class="row">
-    <!-- Minkki's face icon is here -->
-        <div class="col-4">
- <img src="images/sunminkki.png" alt="Minkki Sunny Face" id="weather-icon">
-        </div>
-        <!-- City, time and description here -->
-        <div class="col-4">
-        <h1 id="city-name">Helsinki</h1>
-        <ul>
-          <li>Friday 05:00</li>
-          <li>Clear sky</li>
-          <h2 id="temperature-now">19°C / °F</h2>
-        </ul>
-        </div>
-        <!-- Weather insight list starts from here -->
-        <div class="col-4">
-          <div class="weatherinsight">
-             <ul>
-              <li>Wind:</li>
-              <li>Humidity:</li>
-              <li>Precipitation:</li>
-            </ul>
-           </div>
-        </div>
-        </div>
-        </div>
+  <body>
+    <div class="searchfield">
+      <input type="text" class="form-control" />
+      <button type="submit" class="btn btn-primary mb-3">Search</button>
     </div>
-           <small id="githublink">
-      <a href="https://github.com/JenniMammi/minkkis-weather-app" target="_blank"> 
-        Open source code</a>, by Jenni Mämmi
-      </small>
-      </div>
-    <script src="src/app.js"></script>
+    <!-- this /div refers to <div class="searchfield"> -->
+    <div class="weathercontainer">
+      <img
+        src="images/sunminkki.png"
+        alt="Minkki Sunny Face"
+        id="weather-icon"
+      />
+      <div class="cityName">
+        <h1>Helsinki</h1>
+        <h2>Friday 18:00</h2>
+        <p>Clear sky</p>
+      </div> <!-- this /div refers to <div class="cityName"> -->
 
+      <ul>
+        <li>Wind:</li>
+        <li>Humidity:</li>
+        <li>Precipitation:</li>
+      </ul>
+    </div>
+    <!-- this /div refers to <div class="weathercontainer"> -->
   </body>
 </html>

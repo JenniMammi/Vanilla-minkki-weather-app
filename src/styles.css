@@ -1,51 +1,18 @@
-.weatherwrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.weatherbox {
-  max-width: 900px;
-  margin: 0 auto;
-  margin-top: 150px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-  color: #878787;
-}
-body {
-  font-family: "Josefin Sans", sans-serif;
+.btn {
+  background-color: #5e60ce;
+  margin: 0px !important;
 }
 
-#city-name {
-  color: #2c2e90;
-  font-family: "Lobster", cursive;
-  margin-bottom: 0;
+.form-control {
+  max-width: 700px;
 }
 
-.searchform {
-  display: block;
-  margin: 0px;
-  text-align: center;
+.searchfield {
+  display: flex;
+  justify-content: center;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-#weather-icon {
-  margin: 10px;
-  border: 1px solid white;
-  border-radius: 16px;
-  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-  width: 200px;
-  background: #fff;
-}
-
-#githublink {
-  margin: 0;
+.weathercontainer {
+  grid-template-columns: 1fr 500px 1fr 500px 1fr 1000px;
+  display: grid;
 }
