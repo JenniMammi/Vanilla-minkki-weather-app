@@ -26,7 +26,7 @@ function displayCurrentTemperature(response) {
   let iconElement = document.querySelector("#weather-icon");
   let dogFace = document.querySelector("#dogface-icon");
 
-  if (response.data.main.temp > 20) {
+  if (response.data.main.temp > 23) {
     dogFace.setAttribute("src", "images/hotdog.png");
   } else if (response.data.main.temp > 10) {
     dogFace.setAttribute("src", "images/warmdog.png");
