@@ -33,7 +33,9 @@ function displayCurrentTemperature(response) {
     dogFace.setAttribute("src", "images/colddog.png");
   }
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
   cityElement.innerHTML = response.data.name;
   descElement.innerHTML = response.data.weather[0].description;
   humidElement.innerHTML = Math.round(response.data.main.humidity);
@@ -58,7 +60,29 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Tel Aviv");
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-now");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-now");
+  let celsius = celsiusTemp;
+  temperatureElement.innerHTML = Math.round(celsius);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#searchform");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsius);
+
+search("Tel Aviv");
