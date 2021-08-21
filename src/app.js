@@ -16,6 +16,7 @@ function formatDate(timestamp) {
 }
 
 function displayCurrentTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature-now");
   let cityElement = document.querySelector("#city-searched");
   let descElement = document.querySelector("#weather-description");
@@ -85,4 +86,4 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
-search("Tel Aviv");
+search("Inari");

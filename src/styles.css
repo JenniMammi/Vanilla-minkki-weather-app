@@ -38,6 +38,10 @@ h2 {
   justify-content: center;
 }
 
+.wrapper {
+  margin: 40px auto;
+}
+
 .weathercontainer {
   max-width: 900px;
   grid-template-columns: 1fr 300px 1fr 300px 1fr 300px;
@@ -62,6 +66,27 @@ h2 {
   margin: auto;
 }
 
+#scales {
+  color: black;
+}
+
+#celsius:link,
+#fahrenheit:link,
+#signature:link {
+  text-decoration: none;
+}
+
+#fahrenheit:visited,
+#celsius:visited,
+#signature:visited {
+  color: black;
+}
+
+#fahrenheit:hover,
+#celsius:hover {
+  color: rgb(230, 121, 255);
+}
+
 li:first-letter {
   text-transform: capitalize;
 }
@@ -73,12 +98,8 @@ ul {
   font-size: 18px;
   padding: 0;
 }
-
 #signature {
-  display: block;
-  margin: auto;
-}
-
-#signature {
-  padding: 5px 0px 40px 5px;
+  position: fixed;
+  bottom: 190px;
+  left: 445px;
 }
