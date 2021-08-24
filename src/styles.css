@@ -16,8 +16,11 @@ h2 {
   font-family: "Rampart One", cursive;
 }
 
+.signaturecontainer {
+  margin: 20px 200px 50px 200px;
+}
+
 .app {
-  margin: 20px;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   background-color: white;
@@ -51,8 +54,8 @@ h2 {
 
 .weathercontainer {
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 40px 0px;
-  padding: 40px;
+  margin: 0px 0px;
+  padding: 20px;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -64,10 +67,19 @@ h2 {
   align-items: flex-start;
   font-size: 20px;
   border-radius: 16px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  gap: 0px 10px;
+}
+
+.forecastday {
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 2px 30px 50px 20px rgb(65 50 100 / 8%);
 }
 
 #dogface-icon {
-  width: 300px;
+  width: 350px;
   margin: auto;
 }
 
@@ -77,6 +89,7 @@ h2 {
 
 .cityName {
   margin: auto;
+  padding: 81px;
 }
 
 #scales {
@@ -104,11 +117,21 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+#elements {
+  font-size: 23px;
+}
+
 ul {
   margin: auto;
   list-style: none;
   font-size: 18px;
   padding: 0;
+}
+
+.weatherinsights {
+  padding: 80px;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
 #weatherforecast-icon {

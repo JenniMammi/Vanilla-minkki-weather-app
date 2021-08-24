@@ -39,7 +39,8 @@
       </div>
       <!-- this /div refers to <div class="searchfield"> -->
     </form>
-    <div class="app">
+    <div class="signaturecontainer">
+      <div class="app">
       <div class="weathercontainer">
         <img src="" id="dogface-icon" />
         <div class="cityName">
@@ -59,23 +60,27 @@
           <img src="#" alt="" id="weather-icon" />
         </div>
         <!-- this /div refers to <div class="cityName"> -->
+        
         <div class="weatherinsights">
           <ul>
-            <li>🍃 Wind: <span id="wind"></span>m/s</li>
-            <li>💦 Humidity: <span id="humidity"></span>%</li>
+            <li id="elements">🍃 Wind: <span id="wind"></span>m/s</li>
+          </br>
+            <li id="elements">💦 Humidity: <span id="humidity"></span>%</li>
           </ul>
         </div>
         <!-- this /div refers to <div class="weatherinsights"> -->
       </div>
       <!-- this /div refers to <div class="weathercontainer"> -->
       <div class="forecastcontainer" id="forecastcontainer">
-        <div class="forecastdays"></div>
+        <div class="forecastdays">
+        </div><!-- this /div refers to <div class="forecastdays"> -->
       </div>
       <!-- this /div refers to <div class="forecastcontainer"> -->
-      <!--  <small id="signature"><a href="https://github.com/JenniMammi/minkkis-weather-app" target="_blank">Open source application,</a> coded by Jenni Mämmi</small> -->
-    </div>
-    <!-- this /div refers to <div class="app"> -->
-    <!-- Script to app.js -->
+
+      </div> <!-- this /div refers to <div class="app"> -->
+           <small><a href="https://github.com/JenniMammi/minkkis-weather-app" target="blank_">Open source code</a> by Jenni Mämmi</small>
+    </div> <!-- this /div refers to <div class="signaturecontainer"> -->
+     <!-- Script to app.js -->
     <script src="src/app.js"></script>
   </body>
 </html>
