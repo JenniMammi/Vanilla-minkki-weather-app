@@ -15,6 +15,32 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecastcontainer");
+  let forecastHTML = `
+        <div class="forecastdays">`;
+  let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="forecastday">
+          <p id="dayforecast">${day}</p>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt=""
+            width="50"
+            id="weatherforecast-icon"
+          />
+          <p>
+            <span id="day-warmest">18°</span><span id="day-coldest">12°</span>
+          </p>
+        </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayCurrentTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature-now");
@@ -87,3 +113,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("Inari");
+displayForecast();

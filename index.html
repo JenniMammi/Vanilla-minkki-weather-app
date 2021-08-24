@@ -43,7 +43,7 @@
       <div class="weathercontainer">
         <img src="" id="dogface-icon" />
         <div class="cityName">
-          <h1 id="temperature-now"></h1>
+          <h1><span id="temperature-now"></span>°</h1>
           <p id="scales">
             <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a>
           </p>
@@ -68,67 +68,8 @@
         <!-- this /div refers to <div class="weatherinsights"> -->
       </div>
       <!-- this /div refers to <div class="weathercontainer"> -->
-      <div class="forecastcontainer">
-        <div class="monday">
-          <p>Monday</p>
-          <img
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="50"
-            id="mon-icon"
-          />
-          <p>
-            <span id="day-warmest">18</span><span id="day-coldest">12</span>
-          </p>
-        </div>
-        <div class="tuesday">
-          <p>Tuesday</p>
-          <img
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="50"
-            id="tue-icon"
-          />
-          <p>
-            <span id="day-warmest">18</span><span id="day-coldest">12</span>
-          </p>
-        </div>
-        <div class="wednesday">
-          <p>Wednesday</p>
-          <img
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="50"
-            id="wed-icon"
-          />
-          <p id="degrees">
-            <span id="day-warmest">18</span><span id="day-coldest">12</span>
-          </p>
-        </div>
-        <div class="thursday">
-          <p>Thursday</p>
-          <img
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="50"
-            id="thu-icon"
-          />
-          <p>
-            <span id="day-warmest">18</span><span id="day-coldest">12</span>
-          </p>
-        </div>
-        <div class="friday">
-          <p>Friday</p>
-          <img
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt=""
-            width="50"
-            id="fri-icon"
-          />
-          <p>
-            <span id="day-warmest">18</span><span id="day-coldest">12</span>
-          </p>
-        </div>
+      <div class="forecastcontainer" id="forecastcontainer">
+        <div class="forecastdays"></div>
       </div>
       <!-- this /div refers to <div class="forecastcontainer"> -->
       <!--  <small id="signature"><a href="https://github.com/JenniMammi/minkkis-weather-app" target="_blank">Open source application,</a> coded by Jenni Mämmi</small> -->
