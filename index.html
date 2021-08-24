@@ -10,11 +10,14 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
-    /> 
+    />
     <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Glory&family=Raleway&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Glory&family=Raleway&family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
     <!-- Stylesheet link below -->
     <link rel="stylesheet" href="src/styles.css" />
 
@@ -24,47 +27,114 @@
     <title>Minkki's weather app</title>
   </head>
   <body>
+    <form id="searchform">
+      <div class="searchfield">
+        <input
+          type="search"
+          placeholder="Search city 🔎"
+          class="form-control"
+          id="city-input"
+        />
+        <input type="submit" value="Search" class="btn btn-primary mb-3" />
+      </div>
+      <!-- this /div refers to <div class="searchfield"> -->
+    </form>
     <div class="app">
-      <form id="searchform">
-    <div class="searchfield">
-      <input type="search" placeholder="Search city 🔎" class="form-control" id="city-input"/>
-      <input type="submit" value="Search" class="btn btn-primary mb-3"/>
-    </div>
-    <!-- this /div refers to <div class="searchfield"> -->
-      </form>
-    <div class="weathercontainer">
-      <img
-        src=""
-        id="dogface-icon"
-      />
-      <div class="cityName">
-        <h1 id="temperature-now"></h1>
-        <p id="scales"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></p>
-        <h2 id="city-searched"></h2>
-        <div class="timeClock">
+      <div class="weathercontainer">
+        <img src="" id="dogface-icon" />
+        <div class="cityName">
+          <h1 id="temperature-now"></h1>
+          <p id="scales">
+            <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a>
+          </p>
+          <h2 id="city-searched"></h2>
+          <div class="timeClock">
+            <ul>
+              <li>Last updated: <span id="day"></span></li>
+              <li><span id="time"></span></li>
+              <li><span id="weather-description"></span></li>
+            </ul>
+          </div>
+          <!-- this /div refers to <div class="timeClock"> -->
+          <img src="#" alt="" id="weather-icon" />
+        </div>
+        <!-- this /div refers to <div class="cityName"> -->
+        <div class="weatherinsights">
           <ul>
-            <li>Last updated: <span id="day"></span></li>
-            <li><span id="time"></span></li>
-            <li><span id="weather-description"></span></li>
+            <li>🍃 Wind: <span id="wind"></span>m/s</li>
+            <li>💦 Humidity: <span id="humidity"></span>%</li>
           </ul>
-        </div> <!-- this /div refers to <div class="timeClock"> -->
-                <img
-        src="#"
-        alt=""
-        id="weather-icon">
-      </div> <!-- this /div refers to <div class="cityName"> -->
-        <div class="weatherinsights"></div>
-      <ul>
-        <li>🍃 Wind: <span id="wind"></span>m/s</li>
-        <li>💦 Humidity: <span id="humidity"></span>%</li>
-      </ul>
-      </div>  <!-- this /div refers to <div class="weatherinsights"> -->
+        </div>
+        <!-- this /div refers to <div class="weatherinsights"> -->
+      </div>
+      <!-- this /div refers to <div class="weathercontainer"> -->
+      <div class="forecastcontainer">
+        <div class="monday">
+          <p>Monday</p>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt=""
+            width="50"
+            id="mon-icon"
+          />
+          <p>
+            <span id="day-warmest">18</span><span id="day-coldest">12</span>
+          </p>
+        </div>
+        <div class="tuesday">
+          <p>Tuesday</p>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt=""
+            width="50"
+            id="tue-icon"
+          />
+          <p>
+            <span id="day-warmest">18</span><span id="day-coldest">12</span>
+          </p>
+        </div>
+        <div class="wednesday">
+          <p>Wednesday</p>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt=""
+            width="50"
+            id="wed-icon"
+          />
+          <p id="degrees">
+            <span id="day-warmest">18</span><span id="day-coldest">12</span>
+          </p>
+        </div>
+        <div class="thursday">
+          <p>Thursday</p>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt=""
+            width="50"
+            id="thu-icon"
+          />
+          <p>
+            <span id="day-warmest">18</span><span id="day-coldest">12</span>
+          </p>
+        </div>
+        <div class="friday">
+          <p>Friday</p>
+          <img
+            src="http://openweathermap.org/img/wn/04d@2x.png"
+            alt=""
+            width="50"
+            id="fri-icon"
+          />
+          <p>
+            <span id="day-warmest">18</span><span id="day-coldest">12</span>
+          </p>
+        </div>
+      </div>
+      <!-- this /div refers to <div class="forecastcontainer"> -->
+      <!--  <small id="signature"><a href="https://github.com/JenniMammi/minkkis-weather-app" target="_blank">Open source application,</a> coded by Jenni Mämmi</small> -->
     </div>
-    <!-- this /div refers to <div class="weathercontainer"> -->
-        <small id="signature"><a href="https://github.com/JenniMammi/minkkis-weather-app" target="_blank">Open source application,</a> coded by Jenni Mämmi</small>
-
-  </div> <!-- this /div refers to <div class="app"> -->
-   <!-- Script to app.js -->
-    <script src="src/app.js"></script>  
+    <!-- this /div refers to <div class="app"> -->
+    <!-- Script to app.js -->
+    <script src="src/app.js"></script>
   </body>
 </html>
