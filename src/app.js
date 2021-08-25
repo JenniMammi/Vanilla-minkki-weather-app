@@ -53,11 +53,11 @@ function displayForecast(response) {
             id="weatherforecast-icon"
           />
           <p>
-            <span id="day-warmest">${Math.round(
+            <span id="day-warmest">Max: ${Math.round(
               forecastDay.temp.max
-            )}°</span><span id="day-coldest">${Math.round(
+            )}°C</span><span id="day-coldest">Min: ${Math.round(
           forecastDay.temp.min
-        )}°</span>
+        )}°C</span>
           </p>
         </div>`;
     }
